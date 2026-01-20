@@ -1,4 +1,4 @@
-package com.example.componentscan.annotation;
+package com.example.autowired.annotation;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -6,7 +6,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class App {
     public static void main(String[] args) {
         ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
-      Employee emp=  context.getBean("employee",Employee.class);
+      Employee emp=  context.getBean("employee", Employee.class);
         System.out.println(emp.toString());
+        Manager man=  context.getBean("manager", Manager.class);
+        System.out.println(man.toString());
+
     }
 }
