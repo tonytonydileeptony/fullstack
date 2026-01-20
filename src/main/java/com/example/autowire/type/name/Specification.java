@@ -1,4 +1,4 @@
-package com.example.autowire.name;
+package com.example.autowire.type.name;
 
 
 public class Specification {

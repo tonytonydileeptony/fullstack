@@ -1,4 +1,4 @@
-package com.example.autowire.name;
+package com.example.autowire.type.name;
 
 //import car.constructor.injection.Specification;
 //import org.springframework.beans.factory.annotation.Autowired;

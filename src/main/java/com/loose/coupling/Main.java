@@ -1,5 +1,8 @@
 package com.loose.coupling;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -16,6 +19,8 @@ public class Main {
         DatabaseProvider newdatabaseProvider=new NewdatabaseProvider();
         UserManager userManagerWithNewDB=new UserManager(newdatabaseProvider);
         System.out.printf("Hello and welcome!"+userManagerWithNewDB.getUserInfo());
-
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationIOCContainer.xml");
+        userManager1=(UserManager) context.getBean("dataProvider");
+        System.out.println(" ----"+userManager1.getUserInfo());
     }
 }
